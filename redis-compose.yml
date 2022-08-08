@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  redis:
+    container_name: "redis"
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis.config:/usr/local/etc/redis/redis.conf
+      
+#1.docker exec -it 82300a2f7adb sh
+#2.redis-cli
+#keys * , setex mykey 60 "Hello World" , mget mykey , DEL mykey

@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  mysql:
+    image: mysql:8.0.20
+    environment:
+      MYSQL_DATABASE: testdb
+      MYSQL_PASSWORD: rootpassword
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "33061:3306"
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+      
+#1.docker exec -it 278bdccaef7b bash
+#2.mysql -uroot -ppassword -> use same credential to connect to workbench
+#: operator-> local machine : container
