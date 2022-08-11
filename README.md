@@ -4,7 +4,7 @@ A banking application using Spring boot and REST API, Using MySQL for Storage , 
 # Prerequisite
 1. MySQL Server, MongoDB Server, Redis Server, jdk 8 or above
 2. Docker compose file is present is project file
-3. Postman for API hit
+3. Postman for API testing (Optional)
 
 # Problem Statement:
 The project is mainly based on the idea of developing a banking solution on micro services API based solution, which would replace the existing manual banking solutions. All the operations that are carried out in the bank manually would be performed automatically and easily by the Core Banking Solution.
@@ -39,18 +39,18 @@ Branch branch id, address, phone
 Create Account For Customer:
 {
     "customerInfo": {
-        "name": "Hrittika Pramanick",
+        "name": "User One",
         "age": 18,
-        "mobile": "9932275858",
-        "address": "Santipur"
+        "mobile": "12345678",
+        "address": "Place One"
     },
     "accountInfo": {
         "type": "SAVINGS",
         "branch": {
-            "address": "Santipur",
+            "address": "Place One",
             "phone": "1234567890"
         },
-        "balance": 20000
+        "balance": 200000
     }
 }
 
@@ -59,26 +59,26 @@ Create Account for existing Customer:
 	"customerId":22,
 	"type":"CURRENT",
 	"branch":{
-		"address":"Hydrabad",
-		"phone":"0987654321"
+		"address":"Place Two",
+		"phone":"1111111111"
 	},
 	"balance": 500000
 }
 
 Update Customer:
 {
-    "name": "Rahul Sharma",
+    "name": "User Two",
     "age": 38,
     "mobile": "9988776655",
-    "address": "Amritsar"
+    "address": "Place Three"
 }
 
 Update Account:
 {
     "type": "SAVINGS",
     "branch": {
-        "address": "Madras",
-        "phone": "9988654321"
+        "address": "Place Four",
+        "phone": "4444444444"
     },
     "balance": 5000000
 }
